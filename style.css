@@ -1,0 +1,148 @@
+body {
+  background-color: lightblue;
+}
+
+.right {
+  padding-top: 150px;
+}
+
+.point {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+}
+
+#pointA {
+  top: 300px;
+  left: 100px;
+}
+#pointB {
+  top: 300px;
+  left: 200px;
+}
+#pointC {
+  top: 300px;
+  left: 300px;
+}
+#pointD {
+  top: 300px;
+  left: 400px;
+}
+#pointE {
+  top: 200px;
+  left: 125px;
+}
+#pointF {
+  top: 200px;
+  left: 300px;
+}
+#pointG {
+  top: 400px;
+  left: 250px;
+}
+
+.line {
+  position: absolute;
+  border: 3px solid white;
+}
+
+#lineAB {
+  top: 325px;
+  left: 150px;
+  width: 50px;
+  transform: rotate(0);
+}
+
+#lineAE {
+  top: 272px;
+  left: 100px;
+  width: 60px;
+  transform: rotate(105deg);
+}
+
+#lineAG {
+  top: 385px;
+  left: 122px;
+  width: 140px;
+  transform: rotate(35deg);
+}
+
+#lineBF {
+  top: 265px;
+  left: 220px;
+  width: 100px;
+  transform: rotate(135deg);
+}
+
+#lineBG {
+  top: 375px;
+  left: 215px;
+  width: 70px;
+  transform: rotate(65deg);
+}
+
+#lineBC {
+  top: 325px;
+  left: 250px;
+  width: 50px;
+  transform: rotate(0);
+}
+
+#lineCF {
+  top: 270px;
+  left: 295px;
+  width: 58px;
+  transform: rotate(90deg);
+}
+
+#lineCG {
+  top: 370px;
+  left: 265px;
+  width: 65px;
+  transform: rotate(120deg);
+}
+
+#lineCD {
+  top: 325px;
+  left: 350px;
+  width: 52px;
+  transform: rotate(0deg);
+}
+
+#lineDG {
+  top: 265px;
+  left: 335px;
+  width: 95px;
+  transform: rotate(45deg);
+}
+
+#lineEF {
+  top: 225px;
+  left: 175px;
+  width: 125px;
+  transform: rotate(0);
+}
+
+#lineFD {
+  top: 265px;
+  left: 335px;
+  width: 95px;
+  transform: rotate(45deg);
+}
+
+.random-number {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>AI | Finding Distance</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <h1 class="text-center">Finding Distance</h1>
+        <div class="left col-6">
+          <div class="container">
+            <!-- Titik A -->
+            <div class="point" id="pointA">A</div>
+            <!-- Titik B -->
+            <div class="point" id="pointB">B</div>
+            <!-- Titik C -->
+            <div class="point" id="pointC">C</div>
+            <!-- Titik D -->
+            <div class="point" id="pointD">D</div>
+            <!-- Titik E -->
+            <div class="point" id="pointE">E</div>
+            <!-- Titik F -->
+            <div class="point" id="pointF">F</div>
+            <!-- Titik G -->
+            <div class="point" id="pointG">G</div>
+
+            <!-- Garis A-B -->
+            <div class="line" id="lineAB"></div>
+            <!-- Garis A-E -->
+            <div class="line" id="lineAE"></div>
+            <!-- Garis A-G -->
+            <div class="line" id="lineAG"></div>
+            <!-- Garis B-F -->
+            <div class="line" id="lineBF"></div>
+            <!-- Garis B-G -->
+            <div class="line" id="lineBG"></div>
+            <!-- Garis B-C -->
+            <div class="line" id="lineBC"></div>
+            <!-- Garis C-F -->
+            <div class="line" id="lineCF"></div>
+            <!-- Garis C-G -->
+            <div class="line" id="lineCG"></div>
+            <!-- Garis C-D -->
+            <div class="line" id="lineCD"></div>
+            <!-- Garis E-F -->
+            <div class="line" id="lineEF"></div>
+            <!-- Garis F-D -->
+            <div class="line" id="lineFD"></div>
+          </div>
+        </div>
+        <div class="right col-6">
+          <h5 class="text-center mb-3">
+            The cheapest route from city A to city D is
+          </h5>
+          <form class="row justify-content-center">
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAnswer"
+                placeholder="Ex: ACD"
+              />
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary mb-3">Submit</button>
+              <button
+                type="button"
+                class="btn btn-danger mb-3"
+                id="playAgainBtn"
+              >
+                Play Again
+              </button>
+            </div>
+          </form>
+          <div class="row justify-content-center">
+            <div class="col-10">
+              <span class="result"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      // Menambahkan event listener pada tombol
+      document
+        .getElementById("playAgainBtn")
+        .addEventListener("click", function () {
+          // Merefresh halaman
+          location.reload();
+        });
+    </script>
+  </body>
+</html>
