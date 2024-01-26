@@ -13,30 +13,22 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>AI | Finding Distance</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row mt-4">
-        <h1 class="text-center">Finding Distance V.0</h1>
+        <h1 class="text-center">Finding Distance v1.1</h1>
         <div class="left col-6">
           <div class="container">
-            <!-- Titik A -->
-            <div class="point" id="pointA">A</div>
-            <!-- Titik B -->
-            <div class="point" id="pointB">B</div>
-            <!-- Titik C -->
-            <div class="point" id="pointC">C</div>
-            <!-- Titik D -->
-            <div class="point" id="pointD">D</div>
-            <!-- Titik E -->
-            <div class="point" id="pointE">E</div>
-            <!-- Titik F -->
-            <div class="point" id="pointF">F</div>
-            <!-- Titik G -->
-            <div class="point" id="pointG">G</div>
+            <!-- Visual Point -->
+            <img
+              class="img-fluid"
+              src="assets/img/visual_distance.png"
+              alt=""
+            />
 
             <!-- Garis A-B -->
             <div class="line" id="lineAB"></div>
@@ -44,16 +36,18 @@
             <div class="line" id="lineAE"></div>
             <!-- Garis A-G -->
             <div class="line" id="lineAG"></div>
-            <!-- Garis B-F -->
-            <div class="line" id="lineBF"></div>
+            <!-- Garis B-E -->
+            <div class="line" id="lineBE"></div>
+            <!-- Garis G-D -->
+            <div class="line" id="lineGD"></div>
             <!-- Garis B-G -->
             <div class="line" id="lineBG"></div>
             <!-- Garis B-C -->
             <div class="line" id="lineBC"></div>
             <!-- Garis C-F -->
             <div class="line" id="lineCF"></div>
-            <!-- Garis C-G -->
-            <div class="line" id="lineCG"></div>
+            <!-- Garis G-C -->
+            <div class="line" id="lineGC"></div>
             <!-- Garis C-D -->
             <div class="line" id="lineCD"></div>
             <!-- Garis E-F -->
@@ -64,7 +58,8 @@
         </div>
         <div class="right col-6">
           <h5 class="text-center mb-3">
-            The cheapest route from city A to city D is
+            The shortest route from city <span id="asal">A</span> to city
+            <span id="tujuan">D</span> is
           </h5>
           <form class="row justify-content-center">
             <div class="col-6">
@@ -73,6 +68,7 @@
                 class="form-control"
                 id="inputAnswer"
                 placeholder="Ex: ACD"
+                required
               />
             </div>
             <div class="col-4">
@@ -100,7 +96,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
       // Menambahkan event listener pada tombol
       document

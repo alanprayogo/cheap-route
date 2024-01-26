@@ -27,14 +27,15 @@ function addRandomNumberBesideLine(lineId) {
 const ab = addRandomNumberBesideLine("lineAB");
 const ae = addRandomNumberBesideLine("lineAE");
 const ag = addRandomNumberBesideLine("lineAG");
-const bf = addRandomNumberBesideLine("lineBF");
+const be = addRandomNumberBesideLine("lineBE");
 const bg = addRandomNumberBesideLine("lineBG");
 const bc = addRandomNumberBesideLine("lineBC");
 const cf = addRandomNumberBesideLine("lineCF");
-const gc = addRandomNumberBesideLine("lineCG");
+const gc = addRandomNumberBesideLine("lineGC");
 const cd = addRandomNumberBesideLine("lineCD");
 const ef = addRandomNumberBesideLine("lineEF");
 const fd = addRandomNumberBesideLine("lineFD");
+const gd = addRandomNumberBesideLine("lineGD");
 
 class Graph {
   constructor() {
@@ -110,10 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contoh penggunaan:
 let graph = new Graph();
+// route
 graph.addEdge("A", "B", ab);
 graph.addEdge("A", "E", ae);
 graph.addEdge("A", "G", ag);
-graph.addEdge("B", "F", bf);
+graph.addEdge("B", "E", be);
 graph.addEdge("B", "G", bg);
 graph.addEdge("B", "C", bc);
 graph.addEdge("C", "F", cf);
@@ -121,9 +123,32 @@ graph.addEdge("G", "C", gc);
 graph.addEdge("C", "D", cd);
 graph.addEdge("E", "F", ef);
 graph.addEdge("F", "D", fd);
+graph.addEdge("G", "D", gd);
+// route reverse
+graph.addEdge("B", "A", ab);
+graph.addEdge("E", "A", ae);
+graph.addEdge("G", "A", ag);
+graph.addEdge("E", "B", be);
+graph.addEdge("G", "B", bg);
+graph.addEdge("C", "B", bc);
+graph.addEdge("F", "C", cf);
+graph.addEdge("C", "G", gc);
+graph.addEdge("D", "C", cd);
+graph.addEdge("F", "E", ef);
+graph.addEdge("D", "F", fd);
+graph.addEdge("D", "G", gd);
 
-let startNode = "A";
-let goalNode = "D";
+// Memilih startNode dan goalNode secara acak
+let startNode, goalNode;
+do {
+  startNode = String.fromCharCode(createRandomNumber(65, 71)); // ASCII code for A to G
+  goalNode = String.fromCharCode(createRandomNumber(65, 71));
+} while (startNode === goalNode); // Memastikan startNode dan goalNode tidak sama
+
+// Update nilai elemen HTML
+document.getElementById("asal").textContent = startNode;
+document.getElementById("tujuan").textContent = goalNode;
+
 let result = ucs(graph.graph, startNode, goalNode);
 console.log(
   `Rute terpendek dari ${startNode} ke ${goalNode}: ${result.path}, Cost: ${result.cost}`

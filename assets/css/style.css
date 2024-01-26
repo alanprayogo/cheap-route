@@ -2,11 +2,19 @@ body {
   background-color: lightblue;
 }
 
+.left {
+  margin-top: 60px;
+}
+
+.left img {
+  z-index: -100;
+}
+
 .right {
   padding-top: 150px;
 }
 
-.point {
+/* .point {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -17,9 +25,9 @@ body {
   font-weight: bold;
   color: white;
   position: absolute;
-}
+} */
 
-#pointA {
+/* #pointA {
   top: 300px;
   left: 100px;
 }
@@ -46,95 +54,102 @@ body {
 #pointG {
   top: 400px;
   left: 250px;
-}
+} */
 
 .line {
   position: absolute;
-  border: 3px solid white;
+  /* border: 3px solid white; */
 }
 
 #lineAB {
-  top: 325px;
+  top: 315px;
   left: 150px;
   width: 50px;
-  transform: rotate(0);
+  transform: rotate(90deg);
 }
 
 #lineAE {
-  top: 272px;
+  top: 185px;
   left: 100px;
   width: 60px;
-  transform: rotate(105deg);
+  transform: rotate(90deg);
 }
 
 #lineAG {
-  top: 385px;
-  left: 122px;
+  top: 450px;
+  left: 60px;
   width: 140px;
-  transform: rotate(35deg);
+  transform: rotate(90deg);
 }
 
-#lineBF {
+#lineBE {
   top: 265px;
-  left: 220px;
+  left: 190px;
   width: 100px;
-  transform: rotate(135deg);
+  transform: rotate(90deg);
+}
+
+#lineGD {
+  top: 450px;
+  left: 500px;
+  width: 100px;
+  transform: rotate(90deg);
 }
 
 #lineBG {
-  top: 375px;
-  left: 215px;
+  top: 400px;
+  left: 235px;
   width: 70px;
-  transform: rotate(65deg);
+  transform: rotate(90deg);
 }
 
 #lineBC {
-  top: 325px;
-  left: 250px;
+  top: 315px;
+  left: 315px;
   width: 50px;
-  transform: rotate(0);
+  transform: rotate(90deg);
 }
 
 #lineCF {
-  top: 270px;
-  left: 295px;
+  top: 265px;
+  left: 405px;
   width: 58px;
   transform: rotate(90deg);
 }
 
-#lineCG {
-  top: 370px;
-  left: 265px;
+#lineGC {
+  top: 400px;
+  left: 365px;
   width: 65px;
-  transform: rotate(120deg);
+  transform: rotate(90deg);
 }
 
 #lineCD {
-  top: 325px;
-  left: 350px;
+  top: 315px;
+  left: 470px;
   width: 52px;
-  transform: rotate(0deg);
+  transform: rotate(90deg);
 }
 
 #lineDG {
   top: 265px;
   left: 335px;
   width: 95px;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 #lineEF {
-  top: 225px;
-  left: 175px;
+  top: 185px;
+  left: 275px;
   width: 125px;
-  transform: rotate(0);
+  transform: rotate(90deg);
 }
 
 #lineFD {
-  top: 265px;
-  left: 335px;
+  top: 235px;
+  left: 525px;
   width: 95px;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 .random-number {
@@ -142,7 +157,7 @@ body {
   transform: translateX(-50%) translateY(-50%) rotate(-90deg);
   top: 50%;
   left: 50%;
-  font-size: 20px;
-  font-weight: 800;
-  color: black;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(17, 0, 255);
 }
