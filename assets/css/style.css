@@ -4,6 +4,8 @@ body {
 
 .left {
   margin-top: 82px;
+  /* untuk path2 */
+  padding-left: 70px; 
 }
 
 .left img {
@@ -19,7 +21,18 @@ body {
   /* border: 3px solid white; */
 }
 
-#lineAB {
+.random-number {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(17, 0, 255);
+}
+
+/* path1 */
+/* #lineAB {
   top: 315px;
   left: 150px;
   width: 50px;
@@ -101,14 +114,129 @@ body {
   left: 535px;
   width: 95px;
   transform: rotate(90deg);
+} */
+
+/* path2 */
+#lineAH {
+  top: 315px;
+  left: 85px;
+  width: 50px;
+  transform: rotate(90deg);
 }
 
-.random-number {
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-  top: 50%;
-  left: 50%;
-  font-size: 25px;
-  font-weight: 700;
-  color: rgb(17, 0, 255);
+#lineAG {
+  top: 580px;
+  left: 125px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineAB {
+  top: 470px;
+  left: 195px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineBG {
+  top: 490px;
+  left: 275px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineBE {
+  top: 375px;
+  left: 250px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineCG {
+  top: 490px;
+  left: 395px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineCD {
+  top: 470px;
+  left: 465px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineCB {
+  top: 420px;
+  left: 335px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineDG {
+  top: 580px;
+  left: 550px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineDF {
+  top: 305px;
+  left: 480px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineDK {
+  top: 340px;
+  left: 580px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineEF {
+  top: 305px;
+  left: 335px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineEI {
+  top: 255px;
+  left: 245px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineFC {
+  top: 375px;
+  left: 420px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineHI {
+  top: 180px;
+  left: 200px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineIJ {
+  top: 180px;
+  left: 355px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+#lineJK {
+  top: 180px;
+  left: 555px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+.note {
+  margin-top: 20px;
+  margin-left: 120px;
 }

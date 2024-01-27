@@ -103,44 +103,97 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Penggunaan addRandom
-const ab = addRandomNumberBesideLine("lineAB");
-const ae = addRandomNumberBesideLine("lineAE");
+// path1
+// const ab = addRandomNumberBesideLine("lineAB");
+// const ae = addRandomNumberBesideLine("lineAE");
+// const ag = addRandomNumberBesideLine("lineAG");
+// const be = addRandomNumberBesideLine("lineBE");
+// const bg = addRandomNumberBesideLine("lineBG");
+// const bc = addRandomNumberBesideLine("lineBC");
+// const cf = addRandomNumberBesideLine("lineCF");
+// const gc = addRandomNumberBesideLine("lineGC");
+// const cd = addRandomNumberBesideLine("lineCD");
+// const ef = addRandomNumberBesideLine("lineEF");
+// const fd = addRandomNumberBesideLine("lineFD");
+// const gd = addRandomNumberBesideLine("lineGD");
+
+// path2
+const ah = addRandomNumberBesideLine("lineAH");
 const ag = addRandomNumberBesideLine("lineAG");
-const be = addRandomNumberBesideLine("lineBE");
+const ab = addRandomNumberBesideLine("lineAB");
 const bg = addRandomNumberBesideLine("lineBG");
-const bc = addRandomNumberBesideLine("lineBC");
-const cf = addRandomNumberBesideLine("lineCF");
-const gc = addRandomNumberBesideLine("lineGC");
+const be = addRandomNumberBesideLine("lineBE");
+const cg = addRandomNumberBesideLine("lineCG");
 const cd = addRandomNumberBesideLine("lineCD");
+const cb = addRandomNumberBesideLine("lineCB");
+const dg = addRandomNumberBesideLine("lineDG");
+const df = addRandomNumberBesideLine("lineDF");
+const dk = addRandomNumberBesideLine("lineDK");
 const ef = addRandomNumberBesideLine("lineEF");
-const fd = addRandomNumberBesideLine("lineFD");
-const gd = addRandomNumberBesideLine("lineGD");
+const ei = addRandomNumberBesideLine("lineEI");
+const fc = addRandomNumberBesideLine("lineFC");
+const hi = addRandomNumberBesideLine("lineHI");
+const ij = addRandomNumberBesideLine("lineIJ");
+const jk = addRandomNumberBesideLine("lineJK");
 
 // Penggunaan addEdge
 let graph = new Graph();
-// route
-graph.addEdge("A", "B", ab);
-graph.addEdge("A", "E", ae);
+// route path1
+// graph.addEdge("A", "B", ab);
+// graph.addEdge("A", "E", ae);
+// graph.addEdge("A", "G", ag);
+// graph.addEdge("B", "E", be);
+// graph.addEdge("B", "G", bg);
+// graph.addEdge("B", "C", bc);
+// graph.addEdge("C", "F", cf);
+// graph.addEdge("G", "C", gc);
+// graph.addEdge("C", "D", cd);
+// graph.addEdge("E", "F", ef);
+// graph.addEdge("F", "D", fd);
+// graph.addEdge("G", "D", gd);
+// route reverse path1
+// graph.addEdge("B", "A", ab);
+// graph.addEdge("E", "A", ae);
+// graph.addEdge("G", "A", ag);
+// graph.addEdge("E", "B", be);
+// graph.addEdge("G", "B", bg);
+// graph.addEdge("C", "B", bc);
+// graph.addEdge("F", "C", cf);
+// graph.addEdge("C", "G", gc);
+// graph.addEdge("D", "C", cd);
+// graph.addEdge("F", "E", ef);
+// graph.addEdge("D", "F", fd);
+// graph.addEdge("D", "G", gd);
+
+// route path1
+graph.addEdge("A", "H", ah);
 graph.addEdge("A", "G", ag);
-graph.addEdge("B", "E", be);
+graph.addEdge("A", "B", ab);
 graph.addEdge("B", "G", bg);
-graph.addEdge("B", "C", bc);
-graph.addEdge("C", "F", cf);
-graph.addEdge("G", "C", gc);
+graph.addEdge("B", "E", be);
+graph.addEdge("C", "G", cg);
 graph.addEdge("C", "D", cd);
+graph.addEdge("C", "B", cb);
+graph.addEdge("D", "G", dg);
+graph.addEdge("D", "F", df);
+graph.addEdge("D", "K", dk);
 graph.addEdge("E", "F", ef);
-graph.addEdge("F", "D", fd);
-graph.addEdge("G", "D", gd);
-// route reverse
-graph.addEdge("B", "A", ab);
-graph.addEdge("E", "A", ae);
+graph.addEdge("E", "I", ei);
+graph.addEdge("F", "C", fc);
+graph.addEdge("H", "I", hi);
+graph.addEdge("I", "J", ij);
+graph.addEdge("J", "K", jk);
+// route reverse path2
+graph.addEdge("H", "A", ah);
 graph.addEdge("G", "A", ag);
-graph.addEdge("E", "B", be);
+graph.addEdge("B", "A", ab);
 graph.addEdge("G", "B", bg);
-graph.addEdge("C", "B", bc);
-graph.addEdge("F", "C", cf);
-graph.addEdge("C", "G", gc);
+graph.addEdge("G", "C", cg);
 graph.addEdge("D", "C", cd);
-graph.addEdge("F", "E", ef);
-graph.addEdge("D", "F", fd);
-graph.addEdge("D", "G", gd);
+graph.addEdge("G", "D", dg);
+graph.addEdge("F", "D", df);
+graph.addEdge("K", "D", dk);
+graph.addEdge("I", "E", ei);
+graph.addEdge("I", "H", hi);
+graph.addEdge("J", "I", ij);
+graph.addEdge("K", "J", jk);
