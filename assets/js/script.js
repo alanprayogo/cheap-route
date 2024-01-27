@@ -23,20 +23,6 @@ function addRandomNumberBesideLine(lineId) {
   return randomNumber;
 }
 
-// Contoh penggunaan
-const ab = addRandomNumberBesideLine("lineAB");
-const ae = addRandomNumberBesideLine("lineAE");
-const ag = addRandomNumberBesideLine("lineAG");
-const be = addRandomNumberBesideLine("lineBE");
-const bg = addRandomNumberBesideLine("lineBG");
-const bc = addRandomNumberBesideLine("lineBC");
-const cf = addRandomNumberBesideLine("lineCF");
-const gc = addRandomNumberBesideLine("lineGC");
-const cd = addRandomNumberBesideLine("lineCD");
-const ef = addRandomNumberBesideLine("lineEF");
-const fd = addRandomNumberBesideLine("lineFD");
-const gd = addRandomNumberBesideLine("lineGD");
-
 class Graph {
   constructor() {
     this.graph = {};
@@ -81,35 +67,56 @@ function ucs(graph, start, goal) {
 // Menambahkan event listener pada formulir
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
-  const inputAnswer = document.getElementById("inputAnswer");
+  const inputStart = document.getElementById("inputStart");
+  const inputGoal = document.getElementById("inputGoal");
   const resultSpan = document.querySelector(".result");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Mencegah pengiriman formulir standar
 
     // Mendapatkan jawaban dari input dan mengubah ke huruf besar secara otomatis
-    const userAnswer = inputAnswer.value.toUpperCase();
+    const userStart = inputStart.value.toUpperCase();
+    const userGoal = inputGoal.value.toUpperCase();
 
-    // Memeriksa apakah jawaban pengguna sesuai dengan hasil yang diharapkan
-    if (userAnswer === result.path.join("")) {
-      // Jika sesuai
-      resultSpan.innerHTML = `Correct Answer <br> The shortest route from city ${startNode} to city ${goalNode} <br> Is ${result.path} <br> Cost: ${result.cost}`;
-    } else {
-      // Jika tidak sesuai
-      resultSpan.innerHTML = `Wrong Answer <br> The shortest route from city ${startNode} to city ${goalNode} <br> Is ${result.path} <br> Cost: ${result.cost}`;
-    }
+    console.log(userStart);
+    console.log(userGoal);
 
-    // Menampilkan hasil pada console
-    console.log(result);
+    // Menjalankan algoritma UCS dengan parameter dari inputan user
+    let result = ucs(graph.graph, userStart, userGoal);
+
+    console.log(
+      `Rute terpendek dari ${userStart} ke ${userGoal}: ${result.path}, Cost: ${result.cost}`
+    );
+
+    // Menampilkan hasil pada span
+    resultSpan.innerHTML = `Shortest route <br> from city ${userStart} to city ${userGoal} <br> adalah ${result.path} <br> Cost: ${result.cost}`;
   });
 
   // Menambahkan event listener pada input untuk otomatis uppercase
-  inputAnswer.addEventListener("input", function () {
+  inputStart.addEventListener("input", function () {
+    this.value = this.value.toUpperCase();
+  });
+
+  inputGoal.addEventListener("input", function () {
     this.value = this.value.toUpperCase();
   });
 });
 
-// Contoh penggunaan:
+// Penggunaan addRandom
+const ab = addRandomNumberBesideLine("lineAB");
+const ae = addRandomNumberBesideLine("lineAE");
+const ag = addRandomNumberBesideLine("lineAG");
+const be = addRandomNumberBesideLine("lineBE");
+const bg = addRandomNumberBesideLine("lineBG");
+const bc = addRandomNumberBesideLine("lineBC");
+const cf = addRandomNumberBesideLine("lineCF");
+const gc = addRandomNumberBesideLine("lineGC");
+const cd = addRandomNumberBesideLine("lineCD");
+const ef = addRandomNumberBesideLine("lineEF");
+const fd = addRandomNumberBesideLine("lineFD");
+const gd = addRandomNumberBesideLine("lineGD");
+
+// Penggunaan addEdge
 let graph = new Graph();
 // route
 graph.addEdge("A", "B", ab);
@@ -137,19 +144,3 @@ graph.addEdge("D", "C", cd);
 graph.addEdge("F", "E", ef);
 graph.addEdge("D", "F", fd);
 graph.addEdge("D", "G", gd);
-
-// Memilih startNode dan goalNode secara acak
-let startNode, goalNode;
-do {
-  startNode = String.fromCharCode(createRandomNumber(65, 71)); // ASCII code for A to G
-  goalNode = String.fromCharCode(createRandomNumber(65, 71));
-} while (startNode === goalNode); // Memastikan startNode dan goalNode tidak sama
-
-// Update nilai elemen HTML
-document.getElementById("asal").textContent = startNode;
-document.getElementById("tujuan").textContent = goalNode;
-
-let result = ucs(graph.graph, startNode, goalNode);
-console.log(
-  `Rute terpendek dari ${startNode} ke ${goalNode}: ${result.path}, Cost: ${result.cost}`
-);

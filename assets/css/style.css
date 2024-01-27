@@ -3,7 +3,7 @@ body {
 }
 
 .left {
-  margin-top: 60px;
+  margin-top: 82px;
 }
 
 .left img {
@@ -13,48 +13,6 @@ body {
 .right {
   padding-top: 150px;
 }
-
-/* .point {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-weight: bold;
-  color: white;
-  position: absolute;
-} */
-
-/* #pointA {
-  top: 300px;
-  left: 100px;
-}
-#pointB {
-  top: 300px;
-  left: 200px;
-}
-#pointC {
-  top: 300px;
-  left: 300px;
-}
-#pointD {
-  top: 300px;
-  left: 400px;
-}
-#pointE {
-  top: 200px;
-  left: 125px;
-}
-#pointF {
-  top: 200px;
-  left: 300px;
-}
-#pointG {
-  top: 400px;
-  left: 250px;
-} */
 
 .line {
   position: absolute;
@@ -69,7 +27,7 @@ body {
 }
 
 #lineAE {
-  top: 185px;
+  top: 180px;
   left: 100px;
   width: 60px;
   transform: rotate(90deg);
@@ -112,7 +70,7 @@ body {
 
 #lineCF {
   top: 265px;
-  left: 405px;
+  left: 415px;
   width: 58px;
   transform: rotate(90deg);
 }
@@ -131,23 +89,16 @@ body {
   transform: rotate(90deg);
 }
 
-#lineDG {
-  top: 265px;
-  left: 335px;
-  width: 95px;
-  transform: rotate(90deg);
-}
-
 #lineEF {
-  top: 185px;
-  left: 275px;
+  top: 180px;
+  left: 285px;
   width: 125px;
   transform: rotate(90deg);
 }
 
 #lineFD {
   top: 235px;
-  left: 525px;
+  left: 535px;
   width: 95px;
   transform: rotate(90deg);
 }
